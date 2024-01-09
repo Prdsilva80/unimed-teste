@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Unimed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="assets/logo-unimed.png" alt="Logo da Unimed - Leste Paulista">
+        </div>
+
+        <div class="welcome-message">
+            <p>Bem vindo, Usuário!</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <form id="meuFormulario" action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="possuiPlano">Possui plano de saúde?</label>
+                <select id="possuiPlano" name="possuiPlano" required>
+                    <option value="sim">Não</option>
+                    <option value="nao">Sim</option>
+                </select>
+
+                <div id="nomePlanoContainer">
+                    <label for="nomePlano">Qual o nome do plano de saúde?</label>
+                    <input type="text" id="nomePlano" name="nomePlano">
+                </div>
+
+                <input type="button" value="Enviar" onclick="validarFormulario()">
+            </form>
+
+            <div id="alertaContainer"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
